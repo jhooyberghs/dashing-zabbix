@@ -15,12 +15,12 @@ class setup($ruby_version = "2.0") {
     before => Stage['main']
   }
 
-  class apt_get_update {
-    exec { 'apt-get -y update':
+  class yum_update {
+    exec { 'yum -y update':
       unless => "test -e ${home}/.rvm"
     }
   }
-  class { 'apt_get_update':
+  class { 'yum_update':
     stage => preinstall
   }
 
@@ -30,22 +30,18 @@ class setup($ruby_version = "2.0") {
     ensure => installed
   }
 
-  package { 'build-essential':
+  package { 'git':
     ensure => installed
   }
 
-  package { 'git-core':
-    ensure => installed
-  }
-
-  # Nokogiri dependencies.
-  package { ['libxml2', 'libxml2-dev', 'libxslt1-dev']:
+  package { ['ruby-devel', 'rubygems', 'rubygem-bundler', 'epel-release']:
     ensure => installed
   }
 
   # ExecJS runtime.
   package { 'nodejs':
-    ensure => installed
+    ensure  => installed,
+    require => Package['epel-release'],
   }
 
   # --- Ruby ---------------------------------------------------------------------

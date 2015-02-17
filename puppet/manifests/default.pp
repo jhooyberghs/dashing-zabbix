@@ -6,7 +6,7 @@ file { '/etc/motd':
 
   Dashing Development Machine
 
-- OS:      Ubuntu 12.04
+- OS:      Centos 7 
 - Ruby:    ${ruby_version}
 - IP:      192.168.33.12
 

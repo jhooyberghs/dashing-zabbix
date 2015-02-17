@@ -1,15 +1,7 @@
 require 'dashing'
-require 'dotenv'
-
-if ENV['DOTENV_FILE']
-  Dotenv.load ENV['DOTENV_FILE']
-else
-  Dotenv.load
-end
 
 configure do
-  set :auth_token, ENV.fetch('AUTH_TOKEN', SecureRandom.uuid)
-  set :protection, :except => :frame_options
+  set :auth_token, 'YOUR_AUTH_TOKEN'
 
   helpers do
     def protected!

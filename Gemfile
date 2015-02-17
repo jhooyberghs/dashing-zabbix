@@ -1,9 +1,7 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rake'
 gem 'dashing'
-gem 'dotenv'
-gem 'i18n'
-gem 'faraday'
-gem 'httparty'
-gem 'twitter'
+
+gem 'activesupport'
+gem 'zabby'
+gem 'therubyracer', :platforms => :ruby
