@@ -6,7 +6,7 @@ configure, and destroy virtual machines with the use of its own terminal command
 of environments without any direct interaction with VirtualBox and allows developers to use preferred editors
 and browsers in their native operating system.
 
-This setup will create a Dashing Ruby on Rails development environment with a sample zabbix dashboard.
+This setup will create a Dashing Ruby on Rails development environment with a sample zabbix dashboard and is based on https://github.com/lynnaloo/dashing-vagrant
 
 ###  Install Vagrant ###
 
@@ -27,9 +27,6 @@ Connect to the virtual machine via ssh:
 
     host $ vagrant ssh
 
-Stop the firewall
-    host $ sudo service firewalld stop
-
 Bundle the Ruby gems:
 
     vagrant $ cd dashing
@@ -37,7 +34,9 @@ Bundle the Ruby gems:
 
 Setup environment variables:
 
-* Fill out /home/vagrant/dashing/jobs/zabbix.rb (url, username and password to connect to zabbix)
+* Create /home/vagrant/dashing/jobs/zabbix.rb from jobs/zabbix.rb.sample (change url, username and password to connect to zabbix)
+    vagrant $ cp jobs/zabbix.rb.sample jobs/zabbix.rb
+    vagrant $ vi jobs/zabbix.rb
 
 Start the Dashing server
 
