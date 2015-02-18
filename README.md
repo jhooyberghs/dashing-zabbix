@@ -6,7 +6,7 @@ configure, and destroy virtual machines with the use of its own terminal command
 of environments without any direct interaction with VirtualBox and allows developers to use preferred editors
 and browsers in their native operating system.
 
-This setup will create a Dashing Ruby on Rails development environment with a sample zabbix dashboard and is based on https://github.com/lynnaloo/dashing-vagrant
+This setup will create a Dashing Ruby on Rails development environment with a sample zabbix dashboard and is based on [lynnaloo/dashing-vagrant][https://github.com/lynnaloo/dashing-vagrant] and [dav3860/zabbix_dashboard][https://github.com/dav3860/zabbix_dashboard]
 
 ###  Install Vagrant ###
 
@@ -17,7 +17,7 @@ This setup will create a Dashing Ruby on Rails development environment with a sa
 - vagrant plugin install vagrant-vbguest
 - vagrant plugin install vagrant-cachier
 
-### Clone the repo ### 
+### Clone the repo ###
 
 Clone this `dashing-vagrant` respository (or a fork) to a directory on your host machine:
 
