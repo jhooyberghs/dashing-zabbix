@@ -1,7 +1,8 @@
 ## dashing-zabbix
 
-This setup will create a Dashing Ruby on Rails development environment with a sample zabbix dashboard and is based on [lynnaloo/dashing-vagrant][https://github.com/lynnaloo/dashing-vagrant] and [dav3860/zabbix_dashboard][https://github.com/dav3860/zabbix_dashboard]. 
-It includes all needed things to set up a Virtualbox based Vagrant box that can connect to your own Zabbix server.
+This setup will create a Dashing Ruby on Rails development environment with a sample zabbix dashboard and is based on [lynnaloo/dashing-vagrant](https://github.com/lynnaloo/dashing-vagrant) and [dav3860/zabbix_dashboard](https://github.com/dav3860/zabbix_dashboard).
+ 
+It includes everything needed to set up a Centos 7 Virtualbox based Vagrant box that can connect to your own Zabbix server.
 
 ###  Install Vagrant ###
 
