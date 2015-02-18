@@ -47,8 +47,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
-  config.vm.provision "shell", inline: "rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm; yum -y install puppet"
-
+  config.vm.provision "shell", inline: 'rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm; yum -y install puppet'
+ 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
   config.vm.provision "puppet" do |puppet|

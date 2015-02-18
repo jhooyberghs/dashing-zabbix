@@ -17,3 +17,8 @@ file { '/etc/motd':
 class { setup:
 	ruby_version => $ruby_version
 }
+
+service { 'firewalld':
+  ensure => stopped,
+  enable => false,
+}

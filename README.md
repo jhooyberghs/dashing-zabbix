@@ -10,12 +10,12 @@ This setup will create a Dashing Ruby on Rails development environment with a sa
 
 ###  Install Vagrant ###
 
-- Download and install [VirtualBox 4.3.12](https://www.virtualbox.org/wiki/Downloads)
-- Download and install [Vagrant 1.6.4](http://www.vagrantup.com/downloads.html)
+- Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- Download and install [Vagrant](http://www.vagrantup.com/downloads.html)
 
 Clone this `dashing-vagrant` respository (or a fork) to a directory on your host machine:
 
-    host $ git clone https://github.com/<username>/dashing-vagrant.git
+    host $ git clone https://github.com/jhooyberghs/dashing-vagrant.git
 
 ### Connect to the Virtual Machine ###
 

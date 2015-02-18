@@ -2,6 +2,7 @@
 history.yml
 .env
 !.env.sample
+jobs/zabbix.rb
 rails
 .vagrant
 *.p12

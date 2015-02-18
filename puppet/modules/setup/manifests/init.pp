@@ -50,12 +50,14 @@ class setup($ruby_version = "2.0") {
   exec { 'install_gpg_rvm':
     command => "${as_vagrant} 'curl -sSL https://rvm.io/mpapis.asc | gpg --import -'",
     require => Package['curl'],
+    timeout => '600',
   }
 
   exec { 'install_rvm':
     command => "${as_vagrant} 'curl -L https://get.rvm.io | bash -s stable'",
     creates => "${home}/.rvm/bin/rvm",
     require => [ Package['curl'],Exec['install_gpg_rvm']],
+    timeout => '600',
   }
 
   exec { 'install_ruby':
