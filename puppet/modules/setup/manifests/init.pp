@@ -26,6 +26,7 @@ class setup($ruby_version = "2.0") {
 
   # --- Packages -----------------------------------------------------------------
 
+
   package { 'curl':
     ensure => installed
   }
@@ -46,10 +47,15 @@ class setup($ruby_version = "2.0") {
 
   # --- Ruby ---------------------------------------------------------------------
 
+  exec { 'install_gpg_rvm':
+    command => "${as_vagrant} 'curl -sSL https://rvm.io/mpapis.asc | gpg --import -'",
+    require => Package['curl'],
+  }
+
   exec { 'install_rvm':
     command => "${as_vagrant} 'curl -L https://get.rvm.io | bash -s stable'",
     creates => "${home}/.rvm/bin/rvm",
-    require => Package['curl']
+    require => [ Package['curl'],Exec['install_gpg_rvm']],
   }
 
   exec { 'install_ruby':
