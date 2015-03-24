@@ -36,9 +36,13 @@ Bundle the Ruby gems:
 
 Setup environment variables:
 
-* Create /home/vagrant/dashing/jobs/zabbix.rb from jobs/zabbix.rb.sample (change url, username and password to connect to zabbix). You probably also want to change the hostgroups in this file to match those in your environment (you can find those by searching for "SCREENS" in this file).  
+* Create /home/vagrant/dashing/jobs/zabbix.rb from jobs/zabbix.rb.sample 
+
     vagrant $ cp jobs/zabbix.rb.sample jobs/zabbix.rb
     vagrant $ vi jobs/zabbix.rb
+
+* Change url, username and password to connect to zabbix. 
+* You probably also want to change the hostgroups in this file to match those in your environment (you can find those by searching for "SCREENS" in this file).  
 
 
 Start the Dashing server
